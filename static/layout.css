@@ -3,6 +3,7 @@ body{
     font-weight: 400;
     margin: 0px;
     padding: 0px;
+    background: linear-gradient(180deg, rgb(0,89,255) 0%, rgba(0, 213, 255) 100%);
 }
 #body{
     padding: 20px;
@@ -17,16 +18,22 @@ body{
 #nav {
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: white;
     width: 100%;
     height: 9vh;
-    z-index: 99;
+    min-height: 60px;
+    max-height: 100px;
+    z-index: 1;
     display: flex;
     justify-content: space-around;
     align-items: center;
     box-shadow: 0px 1px 6px black;
+    animation: updrop 0.6s ease;
+}
+#nav ul{margin: 0;padding:0;line-height: 3;}
+.icon{
+    position: relative;
+    top: 6;
 }
 a {
     text-decoration: none;
@@ -37,8 +44,25 @@ a {
 .navlink:hover {
     color: dodgerblue;
 }
+.traffic-light{
+    opacity: 0.5;
+    position: fixed;
+    top: 25vh;
+    z-index: -1;
+    animation: downdrop 0.6s ease;
+}
+.stop {
+    opacity: 0.5;
+    width: 200px;
+    position: fixed;
+    top: 70vh;
+    left: 23%;
+    z-index: -2;
+    animation: downdrop 0.6s ease;
+}
 .fotos-menu{
     height: 450px;
+    border: 1px solid white;
     animation: drop 1s ease;
 }
 .inicio {
@@ -49,6 +73,7 @@ a {
 }
 
 #text-inicio {
+    color: white;
     animation: drop 1s ease;
     max-width: 520px;
 }
@@ -56,9 +81,9 @@ a {
 #matricula-button {
     width: 150px;
     height: 50px;
-    background-color: transparent;
-    border: 1px solid dodgerblue;
-    color: dodgerblue;
+    background-color: yellow;
+    border: 1px solid black;
+    color: black;
     cursor: pointer;
     margin-top: 20px;
 }
@@ -114,6 +139,7 @@ iframe {width: 400px;height:400px}
 }
 
 
+
 @keyframes drop {
     0% {
         opacity: 0;
@@ -124,14 +150,25 @@ iframe {width: 400px;height:400px}
         transform: translateX(0px);
     }
 }
-@keyframes simulado {
+@keyframes updrop {
     0% {
-        opacity: 0;
+        transform: translateY(-100px);
     }
     100% {
-        opacity: 1;
+        transform: translateY(0px);
     }
 }
+@keyframes downdrop {
+    0%{
+        transform: translateY(100px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+
 @media screen and (max-width: 950px){
     .inicio {
         flex-direction: column-reverse;
@@ -149,11 +186,16 @@ iframe {width: 400px;height:400px}
     .fotos-menu {
         height: 300px;
     }
+    .traffic-light{top: 50vh;width:200}
+    .stop{left:70%;width: 200;}
 }
 @media screen and (max-width: 425px){
+    .stop{left: 50%;}
     .fotos-menu{height: 35vh;}
     iframe{width:220px;height:220px;}
     .navlink {font-size: 12px;}
     #matricula{width:80px;height:20px;font-size:12px}
-    ul{padding: 0px;}
+}
+@media screen and (max-width: 375px){
+    .stop{display: none;}
 }
