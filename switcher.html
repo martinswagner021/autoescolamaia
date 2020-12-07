@@ -22,15 +22,34 @@
             a:hover{color:black;}
             
             .choose{
-                position: absolute;
-                left: 50%;                
-                bottom:50%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                text-align: justify;
-                transform: translate(-50%, 50%);
+                text-align: center;
+            }
+            img{
+                position: fixed;
+                z-index: -1;
+                top: 50%;
+                left:50%;
+                width: 100%;
+                min-width: 1280px;
+                transform: translate(-50%,-50%);
+                opacity: 0.15;
+            }
+            .links{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .links-content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            iframe{
+                margin: 10px;
             }
             @media screen and (max-width:425px) {
                 body
@@ -41,10 +60,19 @@
         </style>
     </head>
     <body>
+        <img src="static/studentdriving.jpg" alt="Student Driving">
         <div class="choose">
         <h1>Escolha uma região:</h1>
-        <a href="https://wa.me/+5521965008293">Duque de Caxias</a> <br>
-        <a href="https://wa.me/+5522997705501">Barra de São João</a>
+        <div class="links">
+            <div class="links-content">
+            <a href="https://wa.me/+5521965008293">Duque de Caxias</a>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d942892.3005974789!2d-43.194065!3d-22.6100122!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997367d81839f9%3A0x528d75826251be2b!2sAuto%20Escola%20Maia!5e0!3m2!1sen!2sbr!4v1607372323612!5m2!1sen!2sbr" width="350px" height="350px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <div class="links-content">
+            <a href="https://wa.me/+5522997705501">Barra de São João</a>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d942892.3005974789!2d-43.194065!3d-22.6100122!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x11e35d481979a5c3!2sMaia%20Driving%20School!5e0!3m2!1sen!2sbr!4v1607374775481!5m2!1sen!2sbr" width="350" height="350px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
         </div>
     </body>
 </html>
