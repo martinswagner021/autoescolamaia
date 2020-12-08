@@ -17,6 +17,7 @@
             a{
                 text-decoration: none;
                 margin-top: 5%;
+                text-decoration: underline;
             }
             a:visited, a:link{color: white;}
             a:hover{color:black;}
@@ -52,6 +53,10 @@
                 margin: 10px;
             }
             @media screen and (max-width:425px) {
+                .links{
+                    flex-direction: column;
+                }
+                iframe{width:200px;height:200px;}
                 body
                 .choose{size: auto;}
                 a{font-size: large;}
