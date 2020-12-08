@@ -7,7 +7,7 @@ body{
 }
 #body{
     padding: 20px;
-    padding-top: 10vh;
+    padding-top: 5vh;
 }
 #logo {
     position: relative;
@@ -199,13 +199,14 @@ a {
     }
     .traffic-light{top: 50vh;width:200}
     .stop{left:70%;width: 200;}
+    .galery{color: white;text-align: center;}
 }
 @media screen and (max-width: 425px){
     .stop{left: 50%;}
-    .fotos-menu{height: 35vh;}
+    .fotos-menu{height: 30vh;}
     iframe{width:220px;height:220px;}
     .navlink {font-size: 12px;}
-    #matricula{width:80px;height:20px;font-size:12px}
+    #matricula{width:90px;height:20px;font-size:12px}
 }
 @media screen and (max-width: 375px){
     .stop{display: none;}
