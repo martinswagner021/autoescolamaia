@@ -147,6 +147,7 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
 }
+.galery{color: white;text-align: center;animation:drop 0.6 ease;}
 
 
 
@@ -199,7 +200,6 @@ a {
     }
     .traffic-light{top: 50vh;width:200}
     .stop{left:70%;width: 200;}
-    .galery{color: white;text-align: center;}
 }
 @media screen and (max-width: 425px){
     .stop{left: 50%;}
