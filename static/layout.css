@@ -90,14 +90,15 @@ a {
     cursor: pointer;
     margin-top: 20px;
 }
-#matricula-button:hover {
-    background-color: white;
-}
 #copyright {
     background-color: rgb(26, 26, 26);
     color: gray;
     padding: 20px;
 }
+.copyright-text{
+    margin: 10px;
+}
+
 .normal-link {
     color: dodgerblue;
 }
@@ -148,6 +149,23 @@ a {
     flex-wrap: wrap;
 }
 .galery{color: white;text-align: center;animation:drop 0.6 ease;}
+
+.feedback {
+    transform: translateY(-7px);
+    margin: 3px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 2px;
+    font-weight: 700;
+    width: 160px;
+    height: 30px;
+}
+.feedback:hover{
+    color: black;
+    cursor: pointer;
+    border: 2px solid black;
+}
 
 
 
